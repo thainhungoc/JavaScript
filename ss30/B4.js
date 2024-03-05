@@ -1,29 +1,4 @@
-// const arr = [1,2,3,4,5,6,7];
-// function soNguyenTo(arr){
-//     var flag=true;
-//     for(let i=0; i<=arr.length; i++){
-//         if(arr[i]< 2){
-//             flag = false;
-//         }else if(arr[i] == 2){
-//             flag = true;
-//         }else if(arr[i] %2 == 0){
-//             flag =  false;
-//         }else{
-//             for(let i=3; i<= arr-1; i+=2){
-//                 if(arr % i ==0){
-//                     flag = false;
-//                     break;
-//                 }
-//             }
 
-//         }
-//         if (flag == true) {
-//             console.log(arr[i] + " là số nguyên tố");
-//         } else {
-//             console.log(arr[i] + " không phải là số nguyên tố");
-//         }
-//     }
-// }
 function soNguyenTo(n) {
     if (n < 2) {
         return false;
