@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(124, 223, 223);
+}
+#tim{
+    background:#fff;
+    border-radius: 30px;
+}
+#tim #search{
+    border:none;
+    outline: none;
+    background-color: none;
+    /* padding: 10px 15px; */
+    font-size: 18px;
+    width:0;
+    padding: 0;
+    trainsition: all 0.25s ease-in-out;
+}
+#tim:hover #search, #tim #search:valid{
+    width:300px;
+    padding: 10px 0px 10px 15px;
+
+}
+#tim #timBtn{
+    background-color: #fff;
+    cursor:pointer;
+    border:none;
+    padding:15px 15px;
+    border-radius: 50%;
+    font-size: 18px;
+}

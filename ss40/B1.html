@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> -->
+</head>
+<style>
+    .step {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 5px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.active {
+    background-color: green;
+    color: white;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 5px 10px;
+}
+
+</style>
+<body>
+    <script src="B1.js"></script>
+    <div class="steps">
+        <div class="step" id="step1">Step 1</div>
+        <div class="step" id="step2">Step 2</div>
+        <div class="step" id="step3">Step 3</div>
+        <div class="step" id="step4">Step 4</div>
+    </div>
+    <div class="buttons">
+        <button id="prevBtn" disabled>Previous</button>
+        <button id="nextBtn">Next</button>
+    </div>
+    
+</body>
