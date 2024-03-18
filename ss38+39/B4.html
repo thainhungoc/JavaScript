@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jokes Generator</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s ease;
+  }
+  #joke-container {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+  button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+</style>
+</head>
+<body>
+
+<div id="joke-container">
+  <h1>Jokes Generator</h1>
+  <p id="joke">Click the button to get a random joke!</p>
+  <button onclick="newJoke()">Get Another Joke</button>
+</div>
+
+<script>
+  const jokes = [
+    "I'm reading a book on anti-gravity. It's impossible to put down!",
+    "Did you hear about the mathematician who's afraid of negative numbers? He'll stop at nothing to avoid them!",
+    "Why don't scientists trust atoms? Because they make up everything!",
+    // Thêm các câu đùa của bạn vào đây
+  ];
+
+  function newJoke() {
+    const randomIndex = Math.floor(Math.random() * jokes.length);
+    document.getElementById('joke').innerText = jokes[randomIndex];
+    document.body.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 75%)`;
+  }
+</script>
+
+</body>
+</html>

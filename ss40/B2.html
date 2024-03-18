@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thêm cầu thủ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Xây dựng chương trình có giao diện</h1>
+    <input type="text" id="playerName" placeholder="Nhập tên cầu thủ">
+    <button onclick="addPlayer()">Thêm cầu thủ</button>
+    <div id="players"></div>
+
+    <script>
+        let id = 0;
+
+        function addPlayer() {
+            let playerName = document.getElementById('playerName').value;
+            if (playerName) {
+                localStorage.setItem(`player${id}`, playerName);
+                id++;
+                displayPlayers();
+            }
+        }
+
+        function displayPlayers() {
+            let playersDiv = document.getElementById('players');
+            playersDiv.innerHTML = '';
+            for (let i = 0; i < localStorage.length; i++) {
+                let key = localStorage.key(i);
+                let value = localStorage.getItem(key);
+                playersDiv.innerHTML += `<p>${key}: ${value}</p>`;
+            }
+        }
+
+        window.onload = displayPlayers;
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Information</title>
+</head>
+<body>
+<h2>Personal Information</h2>
+
+<form id="infoForm">
+    <label for="fullName">Full Name:</label><br>
+    <input type="text" id="fullName" name="fullName"><br><br>
+
+    <label for="age">Age:</label><br>
+    <input type="number" id="age" name="age"><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email"><br><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+<div id="personalInfoDisplay"></div>
+
+<script>
+
+function savePersonalInfo() {
+    const fullName = document.getElementById("fullName").value;
+    const age = document.getElementById("age").value;
+    const email = document.getElementById("email").value;
+
+    const personalInfo = {
+        fullName: fullName,
+        age: age,
+        email: email
+    };
+
+    localStorage.setItem("personalInfo", JSON.stringify(personalInfo));
+}
+
+function displayPersonalInfo() {
+    const storedInfo = localStorage.getItem("personalInfo");
+    if (storedInfo) {
+        const personalInfo = JSON.parse(storedInfo);
+        const displayDiv = document.getElementById("personalInfoDisplay");
+        displayDiv.innerHTML = `
+            <h3>Personal Information</h3>
+            <p><strong>Full Name:</strong> ${personalInfo.fullName}</p>
+            <p><strong>Age:</strong> ${personalInfo.age}</p>
+            <p><strong>Email:</strong> ${personalInfo.email}</p>
+        `;
+    }
+}
+
+window.onload = displayPersonalInfo;
+
+document.getElementById("infoForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    savePersonalInfo();
+    displayPersonalInfo();
+});
+</script>
+
+</body>
+</html>

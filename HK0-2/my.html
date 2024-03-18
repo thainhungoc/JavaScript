@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </head>
+    <style>
+
+body {
+    background-color: #000629;
+    font-family: sans-serif;
+    margin: 0;
+}
+header {
+    display: flex;
+    font-family: sans-serif;
+    margin: 100px 200px 0 200px;
+    
+
+}
+.container-header {
+    width: 280px;
+    color: white;
+    padding-top: 100px;
+}
+.container-header__1 {
+    opacity: 0.6;
+}
+.container-header__2 {
+    padding-left: 208px;
+    opacity: 0.6;
+}
+.container-header__3 {
+    display: flex;
+    padding-left: 135px;
+}
+.container-header__3-2 {
+    margin-left: 13px;
+    font-size: medium;
+}
+.img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.img1 {
+    height: 350px;
+    width: 270px;
+}
+.img2 {
+    width:100px;
+    margin-top: 80px;
+    margin-bottom: 50px;
+
+}
+.header-word {
+    padding-top: 217px;
+    margin-left: 30px;
+    
+}
+.header-word__1, .header-word__2, .header-word__3 {
+    color: white;
+    font-weight: 10;
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+.header-word__1 {
+    margin-bottom: 0 ;
+    margin-top: 40px;
+}
+.header-word__2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.header-word__3 {
+    margin-top: 0;
+    font-size: x-large;
+    color:rgb(186, 119, 144);
+
+}
+.about-me {
+    font-family: sans-serif;
+    display: grid;
+    grid-template-areas: 'item1 item1'
+                         'item2 item3';
+    color: white;
+    padding: 0 40px 0 40px;
+}
+.about-me__header {
+    grid-area: item1;
+    display: flex;
+    justify-content: center;
+}
+.about-me h3 {
+    font-size: 30px;
+}
+.text {
+    color: #4326f7;
+    margin-left: 10px;
+}
+.about-me__left {
+    padding-right: 10px;
+    grid-area: item2;
+    width: 560px;
+
+}
+.about-me__left-p {
+    opacity: 0.6;
+    letter-spacing: 0.1px;
+}
+.about-me__left--infor {
+    display: flex;
+}
+.about-me__left--infor-1,
+.about-me__left--infor-2,
+.about-me__left--infor-3 {
+    margin: 50px 25px 0 0;
+}
+.about-me__left--infor-2,
+.about-me__left--infor-3 {
+    opacity: 0.5;
+}
+.about-me__left--infor-1 p,
+.about-me__left--infor-2 p,
+.about-me__left--infor-3 p {
+    margin-bottom: 40px ;
+}
+.about-me__right {
+    padding-left: 10px;
+    grid-area: item3;
+    display: grid;
+    grid-template-areas: 'item4 item5'
+                         'item6 item7' ;
+    height: 500px;
+}
+.about-me__right-1 {
+    grid-area: item4;
+    border: 1px black solid;
+    border-radius: 15px;
+    background-color: #2B2D40;
+    margin: 0 5px 5px 0;
+    height:230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about-me__right-2 {
+    grid-area: item5;
+    border: 1px black solid;
+    border-radius: 15px;
+    background-color: #2B2D40;
+    margin: 0 0 5px 5px;
+    height:230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about-me__right-3 {
+    grid-area: item6;
+    border: 1px black solid;
+    border-radius: 15px;
+    margin: 5px 5px 0 0;
+    background-color: #2B2D40;
+    height:230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about-me__right-4 {
+    grid-area: item7;
+    border: 1px black solid;
+    border-radius: 15px;
+    background-color: #2B2D40;
+    margin: 5px 0 0 5px;
+    height:230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h5 {
+    margin: 5px 0 30px 0;
+    font-size: 22px;
+}
+
+
+.my-project {
+    font-family: sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.my-project__header {
+    display: flex;
+}
+.my-project__header h3 {
+    font-size: 30px;
+}
+.my-project__title {
+    display: flex;
+    margin: 30px 0 20px 0;
+}
+.my-project__title h5 {
+    margin: 8px;
+    text-transform: uppercase;   
+}
+.red {
+    color:rgb(186, 119, 144);
+}
+.my-project__cell {
+    padding: 0 40px 0 40px;
+    display: grid;
+    grid-template-areas: 'item8 item9'
+                         'item10 item11';
+}
+span {
+    color:rgb(186, 119, 144);
+}
+.my-project__cell-1 {
+    grid-area: item8;
+    margin: 0 10px 10px 0;
+}
+.my-project__cell-2 {
+    grid-area: item9;
+    margin: 0 0 10px 10px;
+}
+.my-project__cell-3 {
+    grid-area: item10;
+    margin: 10px 10px 0 0;
+}
+.my-project__cell-4 {
+    grid-area: item11;
+    margin: 10px 0 0 10px;
+}
+.infor img {
+    width: 200px;
+    height: 150px;
+    border: 1px solid white;
+    border-radius: 12px;
+}
+.my-project__cell-1,
+.my-project__cell-2,
+.my-project__cell-3,
+.my-project__cell-4 {
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: #2B2D40;
+    padding: 20px;
+
+}
+.my-project__cell div h5 {
+    font-size: larger;
+    margin: 0 0;
+}
+.my-project__cell div .content {
+    opacity: 0.6;
+}
+.my-project__cell div .mini {
+    opacity: 0.7;
+    font-size: 12px;
+}
+.infor {
+    display: flex;
+    align-items: center;
+}
+.infor div {
+    margin-left: 40px;
+}
+.infor div p {
+    margin: 10px 0;
+    opacity: 0.6;
+}
+
+.works {
+    display: flex;
+    padding: 100px 40px;
+    color: white;
+    
+    
+}
+.works div {
+    border: 1px solid black;
+    border-radius: 15px;
+    margin: 50px 25px 25px 0;
+    width: 400px;
+    background-color: #2B2D40;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.works__number {
+    font-size: 50px;
+    margin: 30px 0 10px;
+    opacity: 0.6;
+    font-weight: 700;
+    opacity: 0.5;
+}
+.works__number-spe {
+    color: #3E21D7;
+    font-size: 50px;
+    margin: 30px 0 10px;
+    font-weight: 700;
+
+}
+.touch {
+    padding: 0 40px 0 40px;
+    color: white;
+    display: grid;
+    grid-template-areas: 'item12 item12'
+                         'item13 item14';
+}
+.touch-header {
+    grid-area: item12;
+    display: flex;
+    justify-content: center;
+}
+.touch-header h3 {
+    margin: 0 5px 0 5px;
+    font-size: 30px;
+
+}
+.touch-header__spe {
+    color: #3E21D7;
+}
+.touch-left {
+    grid-area: item13;
+}
+.touch-left__cell {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: #2B2D40;
+    width: 480px;
+    height: 150px;
+    margin: 30px 20px 0 0;
+}
+.touch-left__cell h5 {
+    font-size: larger;
+    margin: 20px 35px;
+}
+.cell-image{
+    /* border: 1px solid white; */
+    /* border-radius: 100%; */
+    margin: 80px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+}
+.touch-left__cell-infor {
+    display: flex;
+    margin: 20px 0;
+}
+.touch-left__cell-infor-spe {
+    padding: 0 35px;
+}
+.touch-left__cell-infor p {
+    margin: 0 20px;
+}
+.touch-right {
+    grid-area: item14;
+    margin-left: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 650px;
+}
+.touch-right__input {
+    margin: 20px 0 0 0;
+    padding: 8px 15px;
+    background-color: #2B2D40;
+    height: 30px;
+    border: #2B2D40 1px solid;
+    border-radius: 10px;
+}
+.touch-right__input-spe {
+    margin: 20px 0 0 0;
+    padding: 8px 15px;
+    background-color: #2B2D40;
+    height: 70px;
+    border: #2B2D40 1px solid;
+    border-radius: 10px;
+}
+.touch-right p {
+    border-radius: 10px;
+    width: 100px;
+    padding: 10px;
+    border: 1px white solid;
+    color:rgb(186, 119, 144);
+    letter-spacing: 2px;
+}
+
+footer {
+    margin: 100px 0 0 0;
+    background-color: #2B2D40;
+    width: 1263.33px;
+    height: 80px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.footer-icon {
+    display: flex;
+    padding-left: 610px;
+}
+footer div p {
+    padding: 0 0 0 40px;
+}
+.footer-icon i {
+    padding: 0 5px;
+    width: 20px;
+    height: 20px;
+}
+.footer-icon div {
+    display: flex;
+    flex-direction: column;
+}
+    </style>
+    <body>
+        <header>
+            <div class="container-header">
+                <p class="container-header_1">
+                    Lorem ipsum is simply dummy test of the printing and typesetting industry.
+                Lorem ipsum is has been the industry's standard dummy test ever since the
+                </p>
+                <p class="container-header__2">1500s</p>
+                <div class="container-header__3">
+                    <p class="container-header__3-1"> Download CV </p>
+                    <p class="container-header__3-2">-</p>
+                </div>
+            </div>
+            <div class="img">
+                <img class="img1" src="/1.jpg">
+            </div>
+            <div class="header-word">
+                <h2 class="header-word__1">Web</h2>
+                <h2 class="header-word__2">Developer</h2>
+                <h2 class="header-word__3">---</h2>
+            </div>
+        </header>
+        <section class="about-me">
+            <div class="about-me__header">
+                <h3>About</h3>
+                <h3 class="text">Me</h3>
+            </div>
+            <div class="about-me__left">
+                <h5>Creativity bleeds from the pen of inspiration.</h5>
+                <p class="about-me__left-p">I am your client Consultant having 8+ years of experience in this field provides
+                    complete range of
+                    marketing materials and clienting solution to any industry as well as corporate clients maintaining
+                    their reputation and increasing the clients awearness using PR & other print media & online marketing
+                    activities.</p>
+                <p class="about-me__left-p">Lorem ipsum is simply dummy test of the printing and typesetting industry.
+                    Lorem ipsum is has been the industry's standard dummy test ever since the 1500s.</p>
+                <div class="about-me__left--infor">
+                    <div class="about-me__left--infor-1">
+                        <p>Full name</p>
+                        <p>Age</p>
+                        <p>Language</p>
+                        <p>Phone No</p>
+                        <p>Email</p>
+                        <p>Address</p>
+                    </div>
+                    <div class="about-me__left--infor-2">
+                        <p>:</p>
+                        <p>:</p>
+                        <p>:</p>
+                        <p>:</p>
+                        <p>:</p>
+                        <p>:</p>
+                    </div>
+                    <div class="about-me__left--infor-3">
+                        <p>Maria Ilvor</p>
+                        <p>26 Years</p>
+                        <p>English, spanish</p>
+                        <p>+00 9876543210</p>
+                        <p>example@gmail.com</p>
+                        <p>Ruami Mello Moraes,- Salvador - MA, 40352, Brazail</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-me__right">
+                <div class="about-me__right-1">
+                    <h5>Photoshop</h5>
+                    <p>Lorem ipsum is simply dummy test of the printing</p>
+                </div>
+                <div class="about-me__right-2">
+                    <h5>HTML</h5>
+                    <p>Lorem ipsum is simply dummy test of the printing</p>
+                </div>
+                <div class="about-me__right-3">
+                    <h5>PHP</h5>
+                    <p>Lorem ipsum is simply dummy test of the printing</p>
+                </div>
+                <div class="about-me__right-4">
+                    <h5>Javascript</h5>
+                    <p>Lorem ipsum is simply dummy test of the printing</p>
+                </div>
+            </div>
+        </section>
+        <section class="my-project">
+            <div class="my-project__header">
+                <h3>My</h3>
+                <h3 class="text">Project</h3>
+            </div>
+            <div class="my-project__title">
+                <h5 class="red">all</h5>
+                <h5>design</h5>
+                <h5>developer</h5>
+                <h5>graphics</h5>
+                <h5>templates</h5>
+            </div>
+            <div class="my-project__cell">
+                <div class="my-project__cell-1">
+                    <h5>BonzaMart - Super market</h5>
+                    <p class="mini">3D Graphics | Templates</p>
+                    <p class="content">Lorem ipsum is simply dummy test of the printing and typesetting industry.
+                        Lorem ipsum is has been the industry's standard dummy test ever since the 1500s. <span>Read
+                            more</span></p>
+                    <div class="infor">
+                        <img src="/1.jpg">
+                        <div>
+                            <p>Date : 1, Jan - 2023</p>
+                            <p>Clients : Symphony</p>
+                            <p>Tech : Angular, Nodejs, Ios</p>
+                            <p>Type : eCommerce</p>
+                            <p>URL : www.your-project-url.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-project__cell-2">
+                    <h5>Show Mania- Entertainment</h5>
+                    <p class="mini">Web Design</p>
+                    <p class="content">Lorem ipsum is simply dummy test of the printing and typesetting industry.
+                        Lorem ipsum is has been the industry's standard dummy test ever since the 1500s. <span>Read
+                            more</span></p>
+                    <div class="infor">
+                        <img src="/2.jpg">
+                        <div>
+                            <p>Date : 1, Jan - 2023</p>
+                            <p>Clients : Symphony</p>
+                            <p>Tech : Angular, Nodejs, Ios</p>
+                            <p>Type : eCommerce</p>
+                            <p>URL : www.your-project-url.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-project__cell-3">
+                    <h5>World Today - Portal</h5>
+                    <p class="mini">Web Design</p>
+                    <p class="content">Lorem ipsum is simply dummy test of the printing and typesetting industry.
+                        Lorem ipsum is has been the industry's standard dummy test ever since the 1500s. <span>Read
+                            more</span></p>
+                    <div class="infor">
+                        <img src="/3.jpg">
+                        <div>
+                            <p>Date : 1, Jan - 2023</p>
+                            <p>Clients : Symphony</p>
+                            <p>Tech : Angular, Nodejs, Ios</p>
+                            <p>Type : eCommerce</p>
+                            <p>URL : www.your-project-url.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-project__cell-4">
+                    <h5>Doctory - Health care</h5>
+                    <p class="mini">Developer</p>
+                    <p class="content">Lorem ipsum is simply dummy test of the printing and typesetting industry.
+                        Lorem ipsum is has been the industry's standard dummy test ever since the 1500s. <span>Read
+                            more</span></p>
+                    <div class="infor">
+                        <img src="/4.jpg">
+                        <div>
+                            <p>Date : 1, Jan - 2023</p>
+                            <p>Clients : Symphony</p>
+                            <p>Tech : Angular, Nodejs, Ios</p>
+                            <p>Type : eCommerce</p>
+                            <p>URL : www.your-project-url.com</p>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </section>
+        <section class="works">
+            <div>
+                <p class="works__number">156+</p>
+                <p class="works__word">Clients</p>
+            </div>
+            <div>
+                <p class="works__number">356+</p>
+                <p class="works__word">Projects</p>
+            </div>
+            <div>
+                <p class="works__number-spe">37+</p>
+                <p class="works__word">Country</p>
+            </div>
+            <div>
+                <p class="works__number">21+</p>
+                <p class="works__word">Awords</p>
+            </div>
+        </section>
+        <section class="touch">
+            <div class="touch-header">
+                <h3>Get</h3>
+                <h3>in</h3>
+                <h3 class="touch-header__spe">Touch</h3>
+            </div>
+            <div class="touch-left">
+                <div class="touch-left__cell">
+                    <div class="cell-image">
+                        <i class="fa-regular fa-envelope" style="color: #fefbfc;"></i>
+                    </div>
+                    <div>
+                        <h5>Mail & Website</h5>
+                        <div class="touch-left__cell-infor">
+                            <i class="fa-regular fa-envelope" style="color: #fefbfc;"></i>
+                            <p>mail.examole@gmail.com</p>
+                        </div>
+                        <div class="touch-left__cell-infor">
+                            <i class="fa-solid fa-earth-americas" style="color: #fefbfc;"></i>
+                            <p>www.yourdomain.com</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="touch-left__cell">
+                    <div class="cell-image">
+                        <i class="fa-solid fa-phone" style="color: #f5f5f5;"></i>
+                    </div>
+                    <div>
+                        <h5>Contact</h5>
+                        <div class="touch-left__cell-infor">
+                            <i class="fa-solid fa-phone" style="color: #f5f5f5;"></i>
+                            <p>(+91)-8294xxxxxx</p>
+                        </div>
+                        <div class="touch-left__cell-infor">
+                            <i class="fa-solid fa-phone" style="color: #f5f5f5;"></i>
+                            <p>(+91)-8294xxxxxx</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="touch-left__cell">
+                    <div class="cell-image">
+                        <i class="fa-solid fa-location-dot" style="color: #fafafa;"></i>
+                    </div>
+                    <div>
+                        <h5>Address</h5>
+                        <div class="touch-left__cell-infor">
+                            <i class="fa-solid fa-location-dot" style="color: #fafafa;"></i>
+                            <p>Ruami Melio Maros Fifo, 987, Salvador - MA,</p>
+                        </div>
+                        <div class="touch-left__cell-infor-spe">
+                            <p>40321, Brazil</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="touch-right">
+                <input class="touch-right__input" type="text" placeholder="Full Name">
+                <input class="touch-right__input" type="text" placeholder="Email">
+                <input class="touch-right__input" type="text" placeholder="Phone">
+                <input class="touch-right__input-spe" type="text" placeholder="Message">
+                <p>Submit ---</p>
+    
+            </div>
+        </section>
+        <footer>
+            <div>
+                <p>Copyright <span id="red">Masterly</span> all rights reversed. Powered by Masterly</p>
+            </div>
+            <div class="footer-icon">
+                
+                    <i class="fa-brands fa-facebook" style="color:rgb(186, 119, 144);"></i>
+                
+                    <i class="fa-brands fa-instagram" style="color:rgb(186, 119, 144);"></i>
+                
+                    <i class="fa-brands fa-twitter" style="color:rgb(186, 119, 144);"></i>
+                
+                    <i class="fa-brands fa-linkedin" style="color:rgb(186, 119, 144);"></i>
+    
+                    <div>
+                        <i class="fa-regular fa-circle" style="    color:rgb(186, 119, 144);"></i>
+                        <i class="fa-brands fa-whatsapp" style="color: #63E6BE;"></i>
+                    </div>
+                
+            </div>
+        </footer>
+        <script>
+            // Dữ liệu mẫu
+const localStorageData = {
+    header: {
+        containerHeader1: "Lorem ipsum is simply dummy test of the printing and typesetting industry. Lorem ipsum is has been the industry's standard dummy test ever since the",
+        containerHeader2: "1500s",
+        containerHeader3: {
+            downloadCV: "Download CV"
+        }
+    },
+    aboutMe: {
+        creativityText: "Creativity bleeds from the pen of inspiration.",
+        aboutMeLeft: {
+            paragraph1: "I am your client Consultant having 8+ years of experience in this field provides complete range of marketing materials and clienting solution to any industry as well as corporate clients maintaining their reputation and increasing the clients awearness using PR & other print media & online marketing activities.",
+            paragraph2: "Lorem ipsum is simply dummy test of the printing and typesetting industry. Lorem ipsum is has been the industry's standard dummy test ever since the 1500s.",
+            fullName: "Maria Ilvor",
+            age: "26 Years",
+            languages: "English, spanish",
+            phone: "+00 9876543210",
+            email: "example@gmail.com",
+            address: "Ruami Mello Moraes,- Salvador - MA, 40352, Brazail"
+        },
+        aboutMeRight: [
+            { title: "Photoshop", content: "Lorem ipsum is simply dummy test of the printing" },
+            { title: "HTML", content: "Lorem ipsum is simply dummy test of the printing" },
+            { title: "PHP", content: "Lorem ipsum is simply dummy test of the printing" },
+            { title: "Javascript", content: "Lorem ipsum is simply dummy test of the printing" }
+        ]
+    },
+    myProjects: [
+        { 
+            title: "BonzaMart - Super market",
+            category: "3D Graphics | Templates",
+            content: "Lorem ipsum is simply dummy test of the printing and typesetting industry. Lorem ipsum is has been the industry's standard dummy test ever since the 1500s.",
+            date: "1, Jan - 2023",
+            client: "Symphony",
+            tech: "Angular, Nodejs, Ios",
+            type: "eCommerce",
+            url: "www.your-project-url.com",
+            image: "/1.jpg"
+        },
+        { 
+            title: "Show Mania- Entertainment",
+            category: "Web Design",
+            content: "Lorem ipsum is simply dummy test of the printing and typesetting industry. Lorem ipsum is has been the industry's standard dummy test ever since the 1500s.",
+            date: "1, Jan - 2023",
+            client: "Symphony",
+            tech: "Angular, Nodejs, Ios",
+            type: "eCommerce",
+            url: "www.your-project-url.com",
+            image: "/2.jpg"
+        },
+        { 
+            title: "World Today - Portal",
+            category: "Web Design",
+            content: "Lorem ipsum is simply dummy test of the printing and typesetting industry. Lorem ipsum is has been the industry's standard dummy test ever since the 1500s.",
+            date: "1, Jan - 2023",
+            client: "Symphony",
+            tech: "Angular, Nodejs, Ios",
+            type: "eCommerce",
+            url: "www.your-project-url.com",
+            image: "/3.jpg"
+        },
+        { 
+            title: "Doctory - Health care",
+            category: "Developer",
+            content: "Lorem ipsum is simply dummy test of the printing and typesetting industry. Lorem ipsum is has been the industry's standard dummy test ever since the 1500s.",
+            date: "1, Jan - 2023",
+            client: "Symphony",
+            tech: "Angular, Nodejs, Ios",
+            type: "eCommerce",
+            url: "www.your-project-url.com",
+            image: "/4.jpg"
+        }
+    ]
+};
+
+// Lưu trữ dữ liệu vào Local Storage
+localStorage.setItem('data', JSON.stringify(localStorageData));
+
+// Render dữ liệu từ Local Storage
+document.addEventListener('DOMContentLoaded', function() {
+    const data = JSON.parse(localStorage.getItem('data'));
+
+    // Render phần Header
+    document.querySelector('.container-header__1').textContent = data.header.containerHeader1;
+    document.querySelector('.container-header__2').textContent = data.header.containerHeader2;
+    document.querySelector('.container-header__3-1').textContent = data.header.containerHeader3.downloadCV;
+
+    // Render phần About Me
+    document.querySelector('.about-me h5').textContent = data.aboutMe.creativityText;
+    document.querySelector('.about-me__left h5').textContent = data.aboutMe.aboutMeLeft.paragraph1;
+    document.querySelectorAll('.about-me__left-p')[1].textContent = data.aboutMe.aboutMeLeft.paragraph2;
+    document.querySelector('.about-me__left--infor-1 p:nth-child(1)').textContent = data.aboutMe.aboutMeLeft.fullName;
+    document.querySelector('.about-me__left--infor-1 p:nth-child(2)').textContent = data.aboutMe.aboutMeLeft.age;
+    document.querySelector('.about-me__left--infor-1 p:nth-child(3)').textContent = data.aboutMe.aboutMeLeft.languages;
+    document.querySelector('.about-me__left--infor-1 p:nth-child(4)').textContent = data.aboutMe.aboutMeLeft.phone;
+    document.querySelector('.about-me__left--infor-1 p:nth-child(5)').textContent = data.aboutMe.aboutMeLeft.email;
+    document.querySelector('.about-me__left--infor-1 p:nth-child(6)').textContent = data.aboutMe.aboutMeLeft.address;
+    data.aboutMe.aboutMeRight.forEach((item, index) => {
+        document.querySelectorAll('.about-me__right h5')[index].textContent = item.title;
+        document.querySelectorAll('.about-me__right p')[index].textContent = item.content;
+    });
+
+    // Render phần My Projects
+    data.myProjects.forEach((item, index) => {
+        const cell = document.querySelector(`.my-project__cell-${index + 1}`);
+        cell.querySelector('h5').textContent = item.title;
+        cell.querySelector('.mini').textContent = item.category;
+        cell.querySelector('.content').textContent = item.content;
+        const inforDiv = cell.querySelector('.infor');
+        inforDiv.querySelector('img').setAttribute('src', item.image);
+        const inforDetails = inforDiv.querySelectorAll('p');
+        inforDetails[0].textContent = `Date: ${item.date}`;
+        inforDetails[1].textContent = `Clients: ${item.client}`;
+        inforDetails[2].textContent = `Tech: ${item.tech}`;
+        inforDetails[3].textContent = `Type: ${item.type}`;
+        inforDetails[4].textContent = `URL: ${item.url}`;
+    });
+});
+
+        </script>
+    </body>
+    
+    </html>

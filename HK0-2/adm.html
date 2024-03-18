@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Your CSS styles here */
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Your header content here -->
+    </header>
+
+    <main>
+        <h1>Admin Panel</h1>
+
+        <!-- Form to add new project -->
+        <form id="addProjectForm">
+            <input type="text" id="projectTitle" placeholder="Project Title" required>
+            <input type="text" id="projectCategory" placeholder="Project Category" required>
+            <textarea id="projectContent" placeholder="Project Content" required></textarea>
+            <input type="text" id="projectDate" placeholder="Project Date" required>
+            <input type="text" id="projectClient" placeholder="Project Client" required>
+            <input type="text" id="projectTech" placeholder="Project Tech" required>
+            <input type="text" id="projectType" placeholder="Project Type" required>
+            <input type="text" id="projectURL" placeholder="Project URL" required>
+            <input type="text" id="projectImage" placeholder="Project Image URL" required>
+            <button type="submit">Add Project</button>
+        </form>
+
+        <!-- Display existing projects -->
+        <table id="projectTable">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Category</th>
+                    <th>Content</th>
+                    <th>Date</th>
+                    <th>Client</th>
+                    <th>Tech</th>
+                    <th>Type</th>
+                    <th>URL</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Existing project rows will be inserted here dynamically -->
+            </tbody>
+        </table>
+    </main>
+
+    <script>
+        // Function to render projects from Local Storage
+        function renderProjects() {
+            const projects = JSON.parse(localStorage.getItem('data')).myProjects;
+            const tableBody = document.querySelector('#projectTable tbody');
+            tableBody.innerHTML = '';
+            projects.forEach(project => {
+                const row = `
+                    <tr>
+                        <td>${project.title}</td>
+                        <td>${project.category}</td>
+                        <td>${project.content}</td>
+                        <td>${project.date}</td>
+                        <td>${project.client}</td>
+                        <td>${project.tech}</td>
+                        <td>${project.type}</td>
+                        <td>${project.url}</td>
+                        <td><button onclick="deleteProject('${project.title}')">Delete</button></td>
+                    </tr>
+                `;
+                tableBody.insertAdjacentHTML('beforeend', row);
+            });
+        }
+
+        // Function to add new project
+        function addProject(event) {
+            event.preventDefault();
+            const title = document.querySelector('#projectTitle').value;
+            const category = document.querySelector('#projectCategory').value;
+            const content = document.querySelector('#projectContent').value;
+            const date = document.querySelector('#projectDate').value;
+            const client = document.querySelector('#projectClient').value;
+            const tech = document.querySelector('#projectTech').value;
+            const type = document.querySelector('#projectType').value;
+            const url = document.querySelector('#projectURL').value;
+            const image = document.querySelector('#projectImage').value;
+            const newProject = {
+                title,
+                category,
+                content,
+                date,
+                client,
+                tech,
+                type,
+                url,
+                image
+            };
+            const data = JSON.parse(localStorage.getItem('data'));
+            data.myProjects.push(newProject);
+            localStorage.setItem('data', JSON.stringify(data));
+            renderProjects();
+            document.querySelector('#addProjectForm').reset();
+        }
+
+        // Function to delete project
+        function deleteProject(title) {
+            const data = JSON.parse(localStorage.getItem('data'));
+            data.myProjects = data.myProjects.filter(project => project.title !== title);
+            localStorage.setItem('data', JSON.stringify(data));
+            renderProjects();
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            renderProjects();
+            document.querySelector('#addProjectForm').addEventListener('submit', addProject);
+        });
+    </script>
+</body>
+</html>

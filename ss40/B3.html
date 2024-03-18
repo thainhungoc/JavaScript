@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hiển thị dữ liệu từ Local Storage</title>
+</head>
+<body>
+    <h1>Hiển thị dữ liệu từ Local Storage</h1>
+    <div id="localStorageData"></div>
+
+    <script>
+        function displayLocalStorageData() {
+            let localStorageDataDiv = document.getElementById('localStorageData');
+            localStorageDataDiv.innerHTML = '<h2>Dữ liệu từ Local Storage:</h2>';
+
+            for (let i = 0; i < localStorage.length; i++) {
+                let key = localStorage.key(i);
+                let value = localStorage.getItem(key);
+                localStorageDataDiv.innerHTML += `<p><strong>${key}:</strong> ${value}</p>`;
+            }
+        }
+
+        window.onload = displayLocalStorageData;
+    </script>
+</body>
+</html>

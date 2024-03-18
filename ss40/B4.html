@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Xóa cầu thủ</title>
+</head>
+<body>
+    <h1>Xây dựng chương trình có giao diện</h1>
+    <input type="text" id="playerNameToDelete" placeholder="Nhập tên cầu thủ">
+    <button onclick="deletePlayer()">Xóa cầu thủ</button>
+    <div id="players2"></div>
+
+    <script>
+        function deletePlayer() {
+            let playerName = document.getElementById('playerNameToDelete').value;
+            if (playerName) {
+                for (let i = 0; i < localStorage.length; i++) {
+                    let key = localStorage.key(i);
+                    let value = localStorage.getItem(key);
+                    if (value === playerName) {
+                        localStorage.removeItem(key);
+                        i--;
+                    }
+                }
+                displayPlayers();
+            }
+        }
+
+        function displayPlayers() {
+            let playersDiv = document.getElementById('players2');
+            playersDiv.innerHTML = '';
+            for (let i = 0; i < localStorage.length; i++) {
+                let key = localStorage.key(i);
+                let value = localStorage.getItem(key);
+                playersDiv.innerHTML += `<p>${key}: ${value}</p>`;
+            }
+        }
+
+        window.onload = displayPlayers;
+    </script>
+</body>
+</html>
