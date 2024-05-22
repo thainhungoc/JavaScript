@@ -1,0 +1,58 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  
+  .nav .logo {
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .search-bar input[type="text"] {
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  
+  .search-bar button {
+    padding: 0.5rem;
+    background: #555;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .intro h1 {
+    margin: 2rem 0;
+    text-align: center;
+  }
+  
+  .intro p {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .featured h2 {
+    text-align: center;
+    margin: 2rem 0;
+  }
+  
+  footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <link rel="stylesheet" href="/project/css/đăng ký.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="../assets/css/toastMessage.css">
+</head>
+
+<body>
+    <header class="header-login">
+        <div class="logo">
+            <a href="/project/demo menu.html" class="item"><i class="fa-solid fa-house"></i></a>
+
+        </div>
+    </header>
+    <form class="register-form" id="form-1" method="POST">
+        <h2>CREATE AN ACCOUNT</h2>
+        <div class="form-group">
+            <label for="email">Email</label><br>
+            <input id="email" name="email" type="text" placeholder="Enter a valid email" class="form-control"><br>
+            <span class="form-message"></span>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label><br>
+            <input type="password" id="password" name="password" type="text" class="form-control"><br>
+            <span class="form-message"></span>
+        </div>
+        <div class="form-group">
+            <label for="password_confirmation">Confirm Password</label><br>
+            <input type="password" id="password_confirmation" name="password_confirmation" type="text"
+                class="form-control"><br>
+            <span class="form-message"></span>
+        </div>
+        <button class="form-submit">Đăng ký</button>
+    </form>
+
+    <div id="toast"></div>
+    <script src="/project/js/đăng ký.js"></script>
+    <script src="/project/js/validator.js"></script>
+    <script src="/project/js/đăng nhập.js"></script>
+</body>
+
+</html>
